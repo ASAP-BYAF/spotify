@@ -33,7 +33,7 @@ def main():
 
     n_new_song_spotify = 0
 
-    for i, entry in enumerate(ranking[:1], 1):
+    for i, entry in enumerate(ranking, 1):
         song = entry["song"]
         artist = entry["artist"]
 
