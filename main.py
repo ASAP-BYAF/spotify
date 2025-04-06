@@ -32,6 +32,7 @@ def main():
     ))
 
     n_new_song_spotify = 0
+    new_songs = []
 
     for i, entry in enumerate(ranking, 1):
         song = entry["song"]
@@ -42,8 +43,11 @@ def main():
         if if_exist_in_spotify:
             print(f"Added: Rank {i} --- Added to Spotify: {artist} - {song} !!!")
             n_new_song_spotify += 1
+            new_songs.append((i, artist, song))
 
     print(f"{n_new_song_spotify} new songs have been added to spotify !!!")
+    for i_song in new_songs:
+        print(f"Rank {i_song[0]}: {i_song[1]} - {i_song[2]}")
 
 if __name__ == "__main__":
     main()
